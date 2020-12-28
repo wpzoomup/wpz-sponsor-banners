@@ -3,7 +3,7 @@ add_action( 'snow_monkey_prepend_footer', 'display_sponsor_banners' );
 function display_sponsor_banners() {
 	global $post;
 
-	$today = date( Ymd );
+	$today = date( 'Ymd' );
 	$args = array(
 		'post_type'      => 'sponsor',
 		'posts_per_page' => 99,
