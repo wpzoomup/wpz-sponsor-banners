@@ -17,11 +17,13 @@ function display_sponsor_banners() {
 				'key'     => 'showdate',
 				'value'   => $today,
 				'compare' => '=<',
+				'type'    => 'NUMERIC',
 			),
 			array(
 				'key'     => 'hidedate',
 				'value'   => $today,
 				'compare' => '>',
+				'type'    => 'NUMERIC',
 			),
 		)
 	);
@@ -37,8 +39,6 @@ function display_sponsor_banners() {
 			$sponsor_name = $post->post_title;
 			$logo_url     = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
 			$page_link    = get_post_meta( get_the_ID(), 'pagelink', true );
-			$showdate     = (int) get_post_meta( get_the_ID(), 'showdate', true );
-			$hidedate     = (int) get_post_meta( get_the_ID(), 'hidedate', true );
 			?>
 		<li>
 			<a href="<?php echo esc_url( $page_link ); ?>" target="_blank" rel="noreferrer noopener">
