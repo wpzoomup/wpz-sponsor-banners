@@ -2,16 +2,26 @@
 add_action( 'snow_monkey_prepend_footer', 'display_sponsor_banners' );
 function display_sponsor_banners() {
 	global $post;
+
+	$today = date( Ymd );
 	$args = array(
 		'post_type'      => 'sponsor',
 		'posts_per_page' => 99,
+		'meta_key'       => 'ruby',
+		'orderby'        => 'meta_value',
+		'order'          => 'ASC',
 		'meta_query'     => array(
 			// 'relation' => 'AND',
+			// array(
+			// 	'key'     => 'showdate',
+			// 	'value'   => $today,
+			// 	'compare' => '>=',
+			// ),
 			array(
-				'key'     => 'ruby',
-				'orderby' => 'meta_value',
-				'order'   => 'ASC',
-			)
+				'key'     => 'hidedate',
+				'value'   => $today,
+				'compare' => '<',
+			),
 		)
 	);
 
