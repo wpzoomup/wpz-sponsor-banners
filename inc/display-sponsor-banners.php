@@ -37,7 +37,7 @@ function display_sponsor_banners() {
 			<?php
 		endforeach;
 		?>
-	<ul>
+	</ul>
 </aside>
 		<?php
 	endif;
