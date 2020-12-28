@@ -10,19 +10,19 @@ function display_sponsor_banners() {
 		'meta_key'       => 'ruby',
 		'orderby'        => 'meta_value',
 		'order'          => 'ASC',
-		'meta_query'     => array(
-			// 'relation' => 'AND',
-			// array(
-			// 	'key'     => 'showdate',
-			// 	'value'   => $today,
-			// 	'compare' => '>=',
-			// ),
-			array(
-				'key'     => 'hidedate',
-				'value'   => $today,
-				'compare' => '<',
-			),
-		)
+		// 'meta_query'     => array(
+		// 	'relation' => 'AND',
+		// 	array(
+		// 		'key'     => 'showdate',
+		// 		'value'   => $today,
+		// 		'compare' => '>=',
+		// 	),
+		// 	array(
+		// 		'key'     => 'hidedate',
+		// 		'value'   => $today,
+		// 		'compare' => '<',
+		// 	),
+		// )
 	);
 
 	$banner_posts = get_posts( $args );
