@@ -6,7 +6,6 @@
 
 .wpz-footer-banner__box {
 	display: flex;
-	align-items: center;
 	flex-wrap: wrap;
 	list-style-type: none;
 	margin-left: -10px;
@@ -15,11 +14,14 @@
 
 .wpz-footer-banner__box li {
 	width: calc(50% - 20px);
+	display: flex;
 	margin: 10px;
 }
 
 .wpz-footer-banner__box li a {
-	display: block;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 	padding: 5px;
 	border: 1px solid transparent;
 	border-radius: 4px;
@@ -28,6 +30,12 @@
 
 .wpz-footer-banner__box li a:hover {
 	border: 1px solid#53a537;
+}
+
+.wpz-footer-banner__box li a picture,
+.wpz-footer-banner__box li a h3 {
+	display: block;
+	width: 100%;
 }
 
 .wpz-footer-banner__box li a h3 {
