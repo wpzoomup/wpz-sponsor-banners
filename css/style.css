@@ -4,6 +4,10 @@
 	font-size: .725em;
 }
 
+.wpz-footer-banner .block-min-40em {
+	display: block;
+}
+
 .wpz-footer-banner__box {
 	display: flex;
 	flex-wrap: wrap;
@@ -51,6 +55,9 @@
 }
 
 @media (min-width: 40em) {
+	.wpz-footer-banner .block-min-40em {
+		display: none;
+	}
 	.wpz-footer-banner__box li {
 		width: calc(33.3333% - 20px);
 	}

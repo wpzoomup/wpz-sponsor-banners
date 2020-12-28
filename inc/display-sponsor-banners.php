@@ -32,7 +32,7 @@ function display_sponsor_banners() {
 	if ( $banner_posts ) :
 		?>
 <aside class="wpz-footer-banner c-container">
-	<h2 class="smb-section__title">スポンサー各社さま<span>（敬称略）</span></h2>
+	<h2 class="smb-section__title">スポンサー各社さま<br class="block-min-40em"><span>（敬称略・50音順）</span></h2>
 	<ul class="wpz-footer-banner__box">
 		<?php
 		foreach ( $banner_posts as $post ) :
