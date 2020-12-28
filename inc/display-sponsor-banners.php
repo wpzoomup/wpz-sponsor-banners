@@ -3,26 +3,27 @@ add_action( 'snow_monkey_prepend_footer', 'display_sponsor_banners' );
 function display_sponsor_banners() {
 	global $post;
 
-	$today = date( 'Ymd' );
+	$today = (int) date( 'Ymd' );
+
 	$args = array(
 		'post_type'      => 'sponsor',
 		'posts_per_page' => 99,
 		'meta_key'       => 'ruby',
 		'orderby'        => 'meta_value',
 		'order'          => 'ASC',
-		// 'meta_query'     => array(
-		// 	'relation' => 'AND',
-		// 	array(
-		// 		'key'     => 'showdate',
-		// 		'value'   => $today,
-		// 		'compare' => '>=',
-		// 	),
-		// 	array(
-		// 		'key'     => 'hidedate',
-		// 		'value'   => $today,
-		// 		'compare' => '<',
-		// 	),
-		// )
+		'meta_query'     => array(
+			'relation' => 'AND',
+			array(
+				'key'     => 'showdate',
+				'value'   => $today,
+				'compare' => '=<',
+			),
+			array(
+				'key'     => 'hidedate',
+				'value'   => $today,
+				'compare' => '>',
+			),
+		)
 	);
 
 	$banner_posts = get_posts( $args );
@@ -36,6 +37,8 @@ function display_sponsor_banners() {
 			$sponsor_name = $post->post_title;
 			$logo_url     = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
 			$page_link    = get_post_meta( get_the_ID(), 'pagelink', true );
+			$showdate     = (int) get_post_meta( get_the_ID(), 'showdate', true );
+			$hidedate     = (int) get_post_meta( get_the_ID(), 'hidedate', true );
 			?>
 		<li>
 			<a href="<?php echo esc_url( $page_link ); ?>" target="_blank" rel="noreferrer noopener">
