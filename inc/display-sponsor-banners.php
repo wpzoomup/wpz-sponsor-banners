@@ -3,8 +3,9 @@ add_action( 'snow_monkey_prepend_footer', 'display_sponsor_banners' );
 function display_sponsor_banners() {
 	global $post;
 	$args = array(
-		'post_type'  => 'sponsor',
-		'meta_query' => array(
+		'post_type'      => 'sponsor',
+		'posts_per_page' => 99,
+		'meta_query'     => array(
 			// 'relation' => 'AND',
 			array(
 				'key'     => 'ruby',
