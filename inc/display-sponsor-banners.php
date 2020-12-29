@@ -16,7 +16,7 @@ function display_sponsor_banners() {
 			array(
 				'key'     => 'showdate',
 				'value'   => $today,
-				'compare' => '=<',
+				'compare' => '<=',
 				'type'    => 'NUMERIC',
 			),
 			array(
@@ -25,7 +25,7 @@ function display_sponsor_banners() {
 				'compare' => '>',
 				'type'    => 'NUMERIC',
 			),
-		)
+		),
 	);
 
 	$banner_posts = get_posts( $args );
