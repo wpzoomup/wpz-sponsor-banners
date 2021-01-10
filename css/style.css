@@ -12,7 +12,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
-	margin: 2em -10px;
+	margin: 2em -10px 4em;
 }
 
 .wpz-footer-banner__box li {
@@ -59,7 +59,7 @@
 		display: none;
 	}
 	.wpz-footer-banner__box{
-		margin: 2em -10px;
+		margin: 2em -10px 4em;
 	}
 	.wpz-footer-banner__box li {
 		width: calc(33.3333% - 40px);
