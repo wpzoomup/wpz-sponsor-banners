@@ -12,14 +12,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
-	margin-left: -10px;
-	margin-right: -10px;
+	margin: 2em -10px;
 }
 
 .wpz-footer-banner__box li {
-	width: calc(50% - 20px);
+	width: calc(50% - 40px);
 	display: flex;
-	margin: 10px;
+	margin: 15px 20px;
 }
 
 .wpz-footer-banner__box li a {
@@ -48,6 +47,7 @@
 	font-weight: 400;
 	text-align: center;
 	transition: .3s ease-in-out;
+	padding-top: .5em;
 }
 
 .wpz-footer-banner__box li a:hover h3 {
@@ -58,8 +58,12 @@
 	.wpz-footer-banner .block-min-40em {
 		display: none;
 	}
+	.wpz-footer-banner__box{
+		margin: 2em -10px;
+	}
 	.wpz-footer-banner__box li {
-		width: calc(33.3333% - 20px);
+		width: calc(33.3333% - 40px);
+		margin: 25px 20px;
 	}
 	.wpz-footer-banner__box li a h3 {
 		font-size: 12px;
@@ -68,7 +72,7 @@
 
 @media (min-width: 64em) {
 	.wpz-footer-banner__box li {
-		width: calc(20% - 20px);
+		width: calc(20% - 40px);
 	}
 	.wpz-footer-banner__box li a h3 {
 		font-size: 14px;
