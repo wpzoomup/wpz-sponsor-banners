@@ -1,5 +1,5 @@
 <?php
-add_action( 'snow_monkey_prepend_footer', 'display_sponsor_banners' );
+add_action( 'snow_monkey_append_contents', 'display_sponsor_banners' );
 function display_sponsor_banners() {
 	global $post;
 
