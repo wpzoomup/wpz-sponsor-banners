@@ -3,7 +3,7 @@
  * Plugin name: WPZoomUP Sponsor Banner 追加プラグイン
  * Plugin URI: https://github.com/wpzoomup/wpz-sponsor-banners
  * Description: Snow Monkey テーマで作られた WPZoomUP サイトのフッター部分にスポンサーバナーを追加
- * Version: 0.1.1
+ * Version: 0.1.2
  * Author: WPZoomUP
  * Author URI: https://wpzoomup.com/
  * Text Domain: wpz-sponsor-banner
@@ -36,3 +36,4 @@ add_action( 'wp_enqueue_scripts', 'wpz_sb_enqueue_styles' );
  * 外部ファイルの読み込み /inc
  */
 require_once WPZ_SB_PLUGIN_PATH . 'inc/display-sponsor-banners.php';
+require_once WPZ_SB_PLUGIN_PATH . 'inc/sponsor-custom_posts_column.php';
